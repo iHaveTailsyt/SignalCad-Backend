@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    // Output settings
+    "module": "nodenext",              // Use Node.js ESM style
+    "target": "esnext",                // Modern JS output
+    "rootDir": "./src",                // Source folder
+    "outDir": "./dist",                // Compiled output folder
+    "sourceMap": true,                 
+    "declaration": true,               
+    "declarationMap": true,            
+
+    // Type checking
+    "strict": true,                    
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "isolatedModules": true,           
+    "noUncheckedSideEffectImports": true,
+
+    // Module detection and interop
+    "moduleDetection": "force",
+    "esModuleInterop": true,           
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,      
+
+    // Libraries
+    "lib": ["esnext"],                 
+
+    // JSX (if frontend or React components are compiled here)
+    "jsx": "react-jsx",                
+
+    // Skip checking node_modules
+    "skipLibCheck": true               
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
