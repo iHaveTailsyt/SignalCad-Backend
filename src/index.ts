@@ -6,6 +6,7 @@ import connectDB from './config/db.js';
 // Routes
 import authRoutes from './routes/auth.js';
 import healthRoutes from './routes/health.js';
+import communityRoutes from './routes/communities.js';
 
 // Load environment variables
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(express.json());
 
 // API Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/communities', communityRoutes);
 app.use('/api/health', healthRoutes);
 
 // Root endpoint
