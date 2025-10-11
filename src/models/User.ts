@@ -1,6 +1,6 @@
 import mongoose, { Schema, Document, Types } from 'mongoose';
 import bcrypt from 'bcryptjs';
-import Counter from './Counter.js'; // we'll create this next
+import Counter from './Counter.js';
 
 export interface IUser extends Document {
   _id: number; // numeric ID
