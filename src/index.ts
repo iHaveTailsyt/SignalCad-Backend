@@ -3,32 +3,25 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
 
-// Routes
 import authRoutes from './routes/auth.js';
 import healthRoutes from './routes/health.js';
 import communityRoutes from './routes/communities.js';
 
-// Load environment variables
 dotenv.config();
 
-// Initialize app
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// API Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/communities', communityRoutes);
 app.use('/api/health', healthRoutes);
 
-// Root endpoint
 app.get('/', (req, res) => {
   res.send('🚀 SignalCAD Backend is running');
 });
 
-// Start server (after DB connection)
 const startServer = async () => {
   try {
     await connectDB();
@@ -46,4 +39,4 @@ const startServer = async () => {
 
 startServer();
 
-export default app; // useful for testing
+export default app;
