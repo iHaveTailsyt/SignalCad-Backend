@@ -40,8 +40,8 @@ router.get("/", async (req: Request, res: Response) => {
 
   // --- SERVICE CHECKS ---
   const services = [
-    { name: "API", url: "http://localhost:3000/" },
-    { name: "Auth Service", url: "http://localhost:3000/" },
+    { name: "API", url: "https://signal-cad.vercel.app/status" },
+    { name: "Auth Service", url: "https://signal-cad.vercel.app/status" },
   ];
 
   const serviceStatuses = await Promise.all(
