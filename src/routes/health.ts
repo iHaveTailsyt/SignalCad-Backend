@@ -48,7 +48,7 @@ router.get("/", async (req: Request, res: Response) => {
     services.map(async (svc) => {
       const started = Date.now();
       try {
-        const resp = await axios.get(svc.url, { timeout: 100 });
+        const resp = await axios.get(svc.url, { timeout: 3000 });
         return {
           name: svc.name,
           url: svc.url,
