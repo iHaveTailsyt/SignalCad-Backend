@@ -1,29 +1,19 @@
 {
   "compilerOptions": {
-    "module": "nodenext",             
-    "target": "esnext",                
-    "rootDir": "./src",                
-    "outDir": "./dist",                
-    "sourceMap": true,                 
-    "declaration": true,               
-    "declarationMap": true,            
+    "target": "ES2022",
+    "module": "nodenext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "sourceMap": true,
 
-    "strict": true,                    
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "isolatedModules": true,           
-    "noUncheckedSideEffectImports": true,
-
-    "moduleDetection": "force",
-    "esModuleInterop": true,           
+    "strict": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "verbatimModuleSyntax": true,      
+    "skipLibCheck": true,
 
-    "lib": ["esnext"],                 
-
-    "jsx": "react-jsx",                
-
-    "skipLibCheck": true               
+    // ESM-friendly settings
+    "verbatimModuleSyntax": false
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
